@@ -4,14 +4,11 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class DuplicateList {
+public class DuplicateList2D {
 
 	public static void main(String[] args) {
 		
-		String s="My name is Roshan Roshan. java us my fav subject";
-		
-		//String names[]={"Java", "Selenium", "C++","C","Ruby","Java","C","Java"};
-		String names[]=s.split(" ");
+		String names[]={"Java", "Selenium", "C++","C","Ruby","Java","C","Java"};
 		Integer count=0;
 		
 		HashMap<String, Integer> storeMap=new HashMap<String, Integer>();
@@ -30,7 +27,7 @@ public class DuplicateList {
 		
 		Set<Entry<String, Integer>> entryset=storeMap.entrySet();
 		for(Entry<String, Integer> entry : entryset){
-			if(entry.getValue()>1 || entry.getValue()>0){
+			if(entry.getValue()>1){
 				System.out.println("Duplicate element is : "+entry.getKey()+" time number : "+entry.getValue());
 			}
 			
